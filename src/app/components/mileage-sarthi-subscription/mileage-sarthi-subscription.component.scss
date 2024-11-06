@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+    .bold-sub{
+        font-weight: 700;
+        font-family: 'Open Sans';
+        margin-right: 0.4rem;
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
+    
+
+
+.subscription-parent{
+    padding: 1.875rem;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 0.938rem 0;
+    border: 1px solid #E8ECF8;
+    box-shadow: 0px 0px 1.25rem 0px #EDF1FF;
+    position: relative;
+    height: 100%;
+
+    .recommended{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #D8AD21;
+        color: #FFFFFF;
+        font-size: 12px;
+        line-height: 0.75rem;
+        padding: 0.4rem 1.063rem;
+        font-style: italic;
+        font-weight: 400;
+        font-family: 'Open Sans';
+        text-transform: uppercase;
+    }
+
+    .upper-section{
+         display: flex;
+        flex-direction: column;
+        gap: 0.938rem 0;
+        font-family: 'Open Sans';
+        
+        .benefits-span{
+            font-size: 0.75rem;
+            font-style: italic;
+            font-weight: 400;
+            text-align: left;
+            color: #666666;
+        }
+
+        .heading{
+            font-weight: 700;
+            color: #333333;
+            font-size: 1.25rem;
+
+        }
+
+        .sub-heading{
+            color:  #666666;
+            font-size: 0.875rem;
+        }
+
+        .price-num{
+            font-weight: 700;
+            color: #0A0A5F;
+            font-size: 1.125rem;
+
+            .rupee-sym{
+                font-weight: 400;
+                font-style: italic;
+
+            }
+
+        }
+        .price-desc{
+            font-size: 0.75rem;
+            font-style: italic;
+            font-weight: 400;
+            text-align: left;
+            color:  #666666; 
+        }
+    }
+
+    .subscribe-button{
+        margin-top: 0.938rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem 0;
+
+        .line{
+            height: 1px;
+             background: #DEE3F2;
+             ;
+        }
+
+        .subscribe-btn-0{
+            align-self: flex-start  ;
+            padding: 0.5rem 2rem;
+             background: #FFFFFF;
+             border: 1px solid #0A0A5F;
+             border-radius: 0.313rem;
+             font-family: 'Open Sans';
+             font-weight: 700;
+             font-size: 14px;
+             line-height: 19.07px;
+             color: #0A0A5F;
+
+        }
+
+        .subscribe-btn-1{
+            align-self: flex-start;
+            padding: 0.7rem 2rem;
+            background: linear-gradient(113.54deg, #1C429E 9.5%, #0A0A5F 80.6%);
+            border-radius: 0.313rem;
+            color: #FFFFFF;
+            border: none;
+            font-weight: 700;
+            white-space: no-wrap;
+        }
+        
+    }
+
+    .benefits-list{
+        margin-top: 1.563rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.563rem 0;
+
+        .benefit{
+            display: flex;
+            gap: 0 1rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-family: 'Open Sans';
+                
+                ::ng-deep .circle-icon{
+                    color: #2AAB59;
+                }
+            .bold-benefit{
+                font-weight: 700;
+            }
+        }
+    }
+
+
+}
+
+.subscription-parent-1{
+    background: #F1F4FB;
+    box-shadow: 0px 0px 20px 0px #C3CFF0;
+    
+}
+
+
+@media (max-width: 20rem) {
+    .hidden{
+        display: none;
+    }
+    .subscription-parent{
+        padding: 0 0.938rem;
+        padding-top: 2.313rem;
+        margin-left:  0.938rem;
+        margin-right:  0.938rem;
+        // margin-bottom: 1.875rem;
+        margin-bottom: 1.875rem;
+        border-radius: 0.625rem;
+        
+
+            .sub-heading{
+                font-size: 0.875rem;
+                line-height: 1.25rem    ;
+            }
+
+        .subscribe-button{
+            font-family: 'Open Sans';
+
+            .subscribe-btn-0{
+                align-self: center;
+                padding: 0.5rem 3.5rem;
+                // width: full;
+            }
+
+            .subscribe-btn-1{
+                align-self: center;
+                padding: 0.5rem 3.6rem;
+            }
+        }
+
+        .benefit{
+            gap: 0 0.8rem;
+        }
+
+        .recommended{
+            border-bottom-left-radius: 0.6rem;
+            text-transform: capitalize;
+        }
+    }
+
+    
+}

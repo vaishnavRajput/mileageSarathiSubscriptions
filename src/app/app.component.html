@@ -1,0 +1,32 @@
+
+<div *ngIf="!isMobileView" class="subscriptions-container">
+  <app-mileage-sarthi-subscription *ngFor="let subscriptionPlan of subscriptionPlans; let i = index"
+    [plan] =  "subscriptionPlan"
+    [index]="i"
+  ></app-mileage-sarthi-subscription>
+</div>
+
+<div *ngIf="isMobileView" class="tab-container">
+  <div class="plan-tab" >
+    <p (click)="setTab(0)" [ngClass]="{'active-tab': activeTab === 0}" >{{subscriptionLabels.DIY_TAB}}</p>
+    <div class="tab-underline" *ngIf="activeTab === 0"></div>
+  </div>
+
+  <div class="plan-tab" >
+    <p (click)="setTab(1)" [ngClass]="{'active-tab': activeTab === 1}">{{subscriptionLabels.ASSISTED_JOURNEY_TAB}}</p>
+    <div class="tab-underline" *ngIf="activeTab === 1"></div>
+    
+  </div>
+</div>
+
+<app-mileage-sarthi-subscription
+  *ngIf="isMobileView && activeTab === 0"
+  [plan]="subscriptionPlans[0]"
+  [index]=0
+></app-mileage-sarthi-subscription>
+
+<app-mileage-sarthi-subscription
+  *ngIf="isMobileView && activeTab === 1"
+  [plan]="subscriptionPlans[1]"
+  [index]=1
+></app-mileage-sarthi-subscription>

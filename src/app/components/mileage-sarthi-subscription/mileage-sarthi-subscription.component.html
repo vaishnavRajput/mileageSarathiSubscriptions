@@ -1,0 +1,35 @@
+<div class="subscription-parent" [ngClass]="{'subscription-parent-1': index === 1}">
+    <p *ngIf="index === 1" class="recommended">{{subscriptionLabels.RECOMMENDED}}</p>
+    <div class="upper-section">
+        <h1 class="heading">{{plan.heading}}</h1>
+        <p class="sub-heading">
+            <span class="bold-sub">{{subHeadingBold}}</span>
+            
+            <span>{{restSubHeading}}</span>
+        </p>
+        <p [ngClass]="{'hidden': !plan?.benefitsIncluded}" class="benefits-span">All DIY Consulting Plan Benefits Included</p>
+        <p>
+            <span class="price-num">
+                <span class="rupee-sym">₹</span>
+                {{plan.price}}</span> 
+            <span class="price-desc">{{subscriptionLabels.PRICE_LABEL}}</span>
+        </p>
+    </div>
+    <div class="subscribe-button">
+        <div class="line"></div>
+        <button class="subscribe" [ngClass]="{'subscribe-btn-0': index === 0, 'subscribe-btn-1': index === 1}">{{plan.button}}</button>
+        <div class="line"></div>
+    </div>
+    <div *ngIf="plan?.benefitsList" class="benefits-list">
+        <div class="benefit" *ngFor="let benefit of plan.benefitsList">
+            <div>
+                <mat-icon class="circle-icon">{{subscriptionLabels.CIRCLE_ICON}}</mat-icon>
+
+            </div>
+            <p>
+                <span class="bold-benefit">{{benefit.bold}}</span>
+                {{benefit.content}}
+            </p>
+        </div>
+    </div>
+</div>

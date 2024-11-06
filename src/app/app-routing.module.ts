@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BannerComponentsComponent } from './components/banner-components/banner-components.component';
 
 const routes: Routes = [
     {
-      path: 'subscripton-components',
-      component:
+      path: 'subscription-components',
+      component: BannerComponentsComponent
     }
 ];
 

@@ -7,11 +7,13 @@ import { MileageSarthiSubscriptionComponent } from './components/mileage-sarthi-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MaterialModule } from './Material.Module';
+import { BannerComponentsComponent } from './components/banner-components/banner-components.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MileageSarthiSubscriptionComponent
+    MileageSarthiSubscriptionComponent,
+    BannerComponentsComponent
   ],
   imports: [
     BrowserModule,

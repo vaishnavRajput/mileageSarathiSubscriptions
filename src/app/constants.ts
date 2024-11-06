@@ -51,3 +51,28 @@ export const MILEAGE_SARATHI_SUBSCRIPTION_LABELS = {
     DIY_TAB: 'DIY Consulting',
     ASSISTED_JOURNEY_TAB: 'Mileage Saarthi Assisted Journey'
 }
+
+export const SUBSCRIBE_BANNER_LABELS = {
+    HEADING: 'Subscribe to Gain Benefits of Mileage Saarathi!',
+    SUBHEADING: 'Lorem ipsum dolor sit amet consectetur. Donec ornare nisi morbi ornare arcu dictumst. Velit augue urna et adipiscing viverra cras.',
+    STEPSHEADING: 'Subscribe in 3 easy steps : ',
+    STEPS: [
+        'Select Plan',
+        'Select Vehicle and Tenure',
+        'Billing & Checkout'
+    ],
+    SUBSCRIBEBTNLABEL: 'SUBSCRIBE NOW'
+}
+
+export const SUBSCRIPTION_BANNER = '../assets/subscription-banner.png'
+export const DOTTED_ARROW= '../assets/Line.png'
+
+
+export const COST_SAVING_BANNER_LABELS = {
+    HEADING: 'Your potential cost saving',
+    SUBHEADING: 'Lorem ipsum dolor sit amet consectetur. Donec ornare nisi morbi ornare arcu dictumst. Velit augue urna et adipiscing viverra cras.',
+    FUEL_EFFICIENCY: 'Actual Fuel Efficiency',
+    NATIONAL_BENCHMARK: 'National Benchmark',
+    FUEL_COST: '(₹100 fuel cost)',
+    POTENTIAL_COST_SAVING: 'Potential Cost saving'
+} 

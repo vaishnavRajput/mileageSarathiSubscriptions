@@ -1,1 +1,54 @@
-<p>banner-components works!</p>
+<!-- subscribe now banner -->
+ <div class="subscribe-ban">
+    <!-- left section -->
+    <div class="content-section">
+    <!-- heading subheading -->
+        <div class="heading-section">
+            <h2 class="heading">{{subscribeBannerLabels.HEADING}}</h2>
+            <p class="sub-heading">{{subscribeBannerLabels.SUBHEADING}}</p>
+        </div>
+
+    <!-- steps -->
+        <div class="steps-section">
+            <p class="steps-heading">{{subscribeBannerLabels.STEPSHEADING}}</p>
+            <!-- steps -->
+            <div class="steps">
+                <div
+                *ngFor="let step of subscribeBannerLabels.STEPS ; let i = index"
+                class="step"
+                >
+                <div class="num">
+                    {{i + 1}}
+                </div>
+                <p class="step-content">{{step}}</p>
+                <div *ngIf="i !== 2">
+                    <img src="{{dottedArrowSvg}}" alt="">
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!-- subscribe button -->
+        <div class="subscribe-btn-section">
+            <div class="horizontal-line"></div>
+            <button class="subscribe-btn">
+                {{subscribeBannerLabels.SUBSCRIBEBTNLABEL}}
+            </button>
+        </div>
+
+    </div>
+
+    <!-- image -->
+     <div class="image-section"> 
+        <img src='{{subscriptionSvg}}' alt="subsciption">
+     </div>
+    
+</div>
+
+<app-cost-saving-banner [fuelEfficiency]="2.80" 
+[nationalBenchmark]="4.30"
+[potentialSaving]="1000"
+    
+>
+</app-cost-saving-banner>

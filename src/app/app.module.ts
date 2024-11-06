@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MaterialModule } from './Material.Module';
 import { BannerComponentsComponent } from './components/banner-components/banner-components.component';
+import { CostSavingBannerComponent } from './bannerComponents/cost-saving-banner/cost-saving-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MileageSarthiSubscriptionComponent,
-    BannerComponentsComponent
+    BannerComponentsComponent,
+    CostSavingBannerComponent
   ],
   imports: [
     BrowserModule,

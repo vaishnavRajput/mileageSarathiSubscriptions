@@ -1,0 +1,29 @@
+<div class="cost-banner-container container">
+    <div class="desc-section">
+        <p class="heading">
+            {{costSavingLabels.HEADING}}
+        </p>
+        <p class="description">
+            {{costSavingLabels.SUBHEADING}}
+        </p>
+    </div>
+    <div class="cost-data-section">
+        <div class="fuel-efficiency cost-item">
+            <p class="cost-data">{{fuelEfficiency}}</p>
+            <p class="cost-data-label">{{costSavingLabels.FUEL_EFFICIENCY}}</p>
+            
+        </div>
+        <div class="national-benchmark cost-item">
+            <p class="cost-data">{{nationalBenchmark}}</p>
+            <p class="cost-data-label">{{costSavingLabels.NATIONAL_BENCHMARK}}</p>
+            
+        </div>
+        <div class="vertical-line">
+        </div>
+        <div class="potential-cost cost-item">
+            <p class="cost-data">₹{{potentialSaving}} <span>{{costSavingLabels.FUEL_COST}}</span></p>
+            <p class="cost-data-label">{{costSavingLabels.POTENTIAL_COST_SAVING}}</p>
+           
+        </div>
+    </div>
+</div>

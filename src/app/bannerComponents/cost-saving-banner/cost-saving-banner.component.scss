@@ -1,0 +1,85 @@
+
+
+.cost-banner-container{
+    //added for seperation purpose only
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    font-family: 'Open Sans';
+
+    .desc-section{
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .heading{
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 2.179rem;
+            color:  #0A0A5F;
+            margin: 0   ;
+        }
+
+        .description{
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            color:  #333333;
+            
+        }
+    }
+
+    .cost-data-section{
+        background-color:  #E6EAF7;
+        display: flex;
+        padding: 0 4rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        gap: 0 4rem;
+        align-items: center;
+
+        .vertical-line{
+            width: 2px;
+            height: 100%;
+            background-color: #ffff;
+        }
+
+        .potential-cost{
+            padding: 1rem 1.5rem;
+            background-color: #ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+        }
+
+        .cost-item{
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem 0;
+            align-items: flex-start;
+
+            span{
+                font-weight: 400;
+                font-size: 1.4rem;
+                font-style: italic;
+
+            }
+
+            .cost-data-label{
+                font-size: 1.2rem;
+                color: #333333;
+                line-height: 1.6rem;
+                margin: 0;
+            }
+        }
+
+        .cost-data{
+            font-size: 2rem;
+            font-weight: 700;
+            color:  #333333;
+            margin: 0;
+        }
+    }
+
+}

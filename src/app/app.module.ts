@@ -9,13 +9,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MaterialModule } from './Material.Module';
 import { BannerComponentsComponent } from './components/banner-components/banner-components.component';
 import { CostSavingBannerComponent } from './bannerComponents/cost-saving-banner/cost-saving-banner.component';
+import { UpgradeBenefitsBannerComponent } from './bannerComponents/upgrade-benefits-banner/upgrade-benefits-banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MileageSarthiSubscriptionComponent,
     BannerComponentsComponent,
-    CostSavingBannerComponent
+    CostSavingBannerComponent,
+    UpgradeBenefitsBannerComponent
   ],
   imports: [
     BrowserModule,

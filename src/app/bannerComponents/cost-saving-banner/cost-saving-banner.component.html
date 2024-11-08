@@ -1,23 +1,33 @@
-<div class="cost-banner-container container">
+<div class="cost-banner-container ">
     <div class="desc-section">
-        <p class="heading">
-            {{costSavingLabels.HEADING}}
-        </p>
-        <p class="description">
+        <div class="heading-arrow">
+            <p class="heading">
+                {{costSavingLabels.HEADING}}
+            </p>
+            <div class="minimize-icon-container" (click)="handleMinimize()">
+                <img class="minimize-icon" [ngClass]="{'icon-flipped': minimizeBanner}" src="{{minimizeIcon}}" alt="">
+
+            </div>
+        </div>
+        
+        <p class="description" [ngClass]="{'hideDisplay': minimizeBanner}">
             {{costSavingLabels.SUBHEADING}}
         </p>
     </div>
-    <div class="cost-data-section">
-        <div class="fuel-efficiency cost-item">
-            <p class="cost-data">{{fuelEfficiency}}</p>
-            <p class="cost-data-label">{{costSavingLabels.FUEL_EFFICIENCY}}</p>
-            
+    <div class="cost-data-section" [ngClass]="{'hideDisplay': minimizeBanner}">
+        <div class="efficiency-benchmark">
+            <div class="fuel-efficiency cost-item">
+                <p class="cost-data">{{fuelEfficiency}}</p>
+                <p class="cost-data-label">{{costSavingLabels.FUEL_EFFICIENCY}}</p>
+                
+            </div>
+            <div class="national-benchmark cost-item">
+                <p class="cost-data">{{nationalBenchmark}}</p>
+                <p class="cost-data-label">{{costSavingLabels.NATIONAL_BENCHMARK}}</p>
+                
+            </div>
         </div>
-        <div class="national-benchmark cost-item">
-            <p class="cost-data">{{nationalBenchmark}}</p>
-            <p class="cost-data-label">{{costSavingLabels.NATIONAL_BENCHMARK}}</p>
-            
-        </div>
+       
         <div class="vertical-line">
         </div>
         <div class="potential-cost cost-item">

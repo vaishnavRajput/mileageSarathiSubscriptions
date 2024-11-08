@@ -10,7 +10,6 @@ export class MileageSarthiSubscriptionComponent implements OnInit {
  
   @Input() plan : any;
   @Input() index: number = 0;
-  constructor(private sanitizer: DomSanitizer){}
   subHeadingBold : string = '';
   restSubHeading: string = ''
   subscriptionLabels = MILEAGE_SARATHI_SUBSCRIPTION_LABELS

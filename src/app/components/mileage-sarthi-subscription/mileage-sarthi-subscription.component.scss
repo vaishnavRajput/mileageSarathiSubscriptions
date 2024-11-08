@@ -161,7 +161,7 @@
 }
 
 
-@media (max-width: 20rem) {
+@media (max-width: 26.563rem) {
     .hidden{
         display: none;
     }
@@ -187,12 +187,15 @@
             .subscribe-btn-0{
                 align-self: center;
                 padding: 0.8rem 5.6rem;
-                // width: full;
+                width: 100%;
+                display: block;
             }
 
             .subscribe-btn-1{
                 align-self: center;
                 padding: 0.8rem 5.76rem;
+                width: 100%;
+                display: block;
             }
         }
         .benefits-list{

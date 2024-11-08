@@ -4,35 +4,49 @@
     <div class="content-section">
     <!-- heading subheading -->
         <div class="heading-section">
-            <h2 class="heading">{{subscribeBannerLabels.HEADING}}</h2>
-            <p class="sub-heading">{{subscribeBannerLabels.SUBHEADING}}</p>
-        </div>
-
-    <!-- steps -->
-        <div class="steps-section">
-            <p class="steps-heading">{{subscribeBannerLabels.STEPSHEADING}}</p>
-            <!-- steps -->
-            <div class="steps">
-                <div
-                *ngFor="let step of subscribeBannerLabels.STEPS ; let i = index"
-                class="step"
-                >
-                <div class="num">
-                    {{i + 1}}
-                </div>
-                <p class="step-content">{{step}}</p>
-                <div *ngIf="i !== 2">
-                    <img src="{{dottedArrowSvg}}" alt="">
+            <div class="heading-arrow">
+                <h2 class="heading">{{subscribeBannerLabels.HEADING}}</h2>
+                <div class="minimize-icon-container" (click)="handleMinimize()">
+                    <img class="minimize-icon" [ngClass]="{'icon-flipped': minimizeBanner}" src="{{minimizeIcon}}" alt="">
 
                 </div>
             </div>
+
+            <p class="sub-heading" [ngClass]="{'hideDisplay': minimizeBanner}">{{subscribeBannerLabels.SUBHEADING}}</p>
+        </div>
+
+    <!-- steps -->
+        <div class="steps-section" [ngClass]="{'hideDisplay': minimizeBanner}">
+            <p class="steps-heading" [ngClass]="{'hideDisplay': minimizeBanner}">{{subscribeBannerLabels.STEPSHEADING}}</p>
+            <!-- steps -->
+            <div class="steps" [ngClass]="{'hideDisplay': minimizeBanner}">
+                <div
+                *ngFor="let step of subscribeBannerLabels.STEPS ; let i = index"
+                class="step"
+                [ngClass]="{'hideDisplay': minimizeBanner}"
+                >
+                    <div class="step-container" [ngClass]="{'hideDisplay': minimizeBanner}">
+                        <div class="num">
+                            {{i + 1}}
+                        </div>
+                        <p class="step-content">{{step}}</p>
+                    </div>
+                
+                    <div class="arrow-icon-container"  *ngIf="i !== 2">
+                        <img class="dotted-arrow" src="{{dottedArrowSvg}}" alt="">
+    
+                    </div>
+
+                </div>
+               
+            
             </div>
         </div>
 
     <!-- subscribe button -->
-        <div class="subscribe-btn-section">
-            <div class="horizontal-line"></div>
-            <button class="subscribe-btn">
+        <div class="subscribe-btn-section" [ngClass]="{'hideDisplay': minimizeBanner}">
+            <div class="horizontal-line" [ngClass]="{'hideDisplay': minimizeBanner}"></div>
+            <button class="subscribe-btn" [ngClass]="{'hideDisplay': minimizeBanner}">
                 {{subscribeBannerLabels.SUBSCRIBEBTNLABEL}}
             </button>
         </div>
@@ -40,15 +54,18 @@
     </div>
 
     <!-- image -->
-     <div class="image-section"> 
-        <img src='{{subscriptionSvg}}' alt="subsciption">
+     <div class="image-section " [ngClass]="{'hideDisplay': minimizeBanner}">  
+        <img src='{{subscriptionSvg}}' alt="subsciption" [ngClass]="{'hideDisplay': minimizeBanner}">
      </div>
     
 </div>
-
-<app-cost-saving-banner [fuelEfficiency]="2.80" 
+ <app-cost-saving-banner [fuelEfficiency]="2.80" 
 [nationalBenchmark]="4.30"
 [potentialSaving]="1000"
     
 >
-</app-cost-saving-banner>
+</app-cost-saving-banner> 
+
+<app-upgrade-benefits-banner>
+
+</app-upgrade-benefits-banner> 

@@ -66,7 +66,8 @@ export const SUBSCRIBE_BANNER_LABELS = {
 
 export const SUBSCRIPTION_BANNER = '../assets/subscription-banner.png'
 export const DOTTED_ARROW= '../assets/Line.png'
-
+export const UPGRADE_ICON = '../assets/upgrade-arrow.png'
+export const MINIMIZE_ICON = '../assets/minimize-arrow.png'
 
 export const COST_SAVING_BANNER_LABELS = {
     HEADING: 'Your potential cost saving',
@@ -76,3 +77,10 @@ export const COST_SAVING_BANNER_LABELS = {
     FUEL_COST: '(₹100 fuel cost)',
     POTENTIAL_COST_SAVING: 'Potential Cost saving'
 } 
+
+
+export const UPGRADE_BENEFITS_BANNER = {
+    HEADING: 'Upgrade for added benefits',
+    SUBHEADING: 'Upgrade to <span class="highlight">Assisted Journey</span> for dedicated remote support',
+    UPGRADE_BTN: 'UPGRADE NOW'
+}

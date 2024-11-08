@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+.hideDisplay{
+    display: none !important;
+}
 
-
+.icon-flipped{
+    transform: rotate(180deg);
+}
 
 .subscribe-ban{
     display: inline-flex;
@@ -31,12 +36,28 @@
         align-items: flex-start;
         padding-right: 1rem;
 
-        .heading{
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: #0A0A5F;
+        .heading-arrow{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-self: flex-end;
+            .heading{
+                font-weight: 700;
+                font-size: 1.6rem;
+                color: #0A0A5F;
+                
+               
+                
+    
+            }
 
+            .minimize-icon-container{
+                display: none;
+            }
+            
         }
+
+        
 
         .sub-heading{
             font-size: 1.4rem;
@@ -62,6 +83,13 @@
                 display: flex;
                 align-items: center;
                 gap: 0 0.5504rem;
+
+                .step-container{
+                    display: flex;
+                    align-items: center;
+                    gap: 0 0.5504rem;
+
+                }
                 .num{
                     border-radius: 50%;
                     background-color: #ffff;
@@ -118,4 +146,82 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+@media (max-width: 26.563rem) {
+
+
+    .subscribe-ban{
+        flex-direction: column;
+        border: 1px solid #E8ECF8;
+        border-radius: 1rem;
+        margin: 0 2.1rem;
+    }
+
+    .heading{
+        width: 80%;
+    }
+
+    .minimize-icon-container{
+        display: block !important;
+        .minimize-icon{
+            padding: 0.9rem 0.6rem;
+            border-radius: 50%;
+            background-color: #ffff;
+           
+         }
+
+    }
+    
+
+    .steps-section{
+        .steps{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0 0!important;
+            overflow-y: hidden;
+
+            .step{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important;
+                justify-content: flex-start !important;
+                height: 5rem;
+                position: relative;
+                
+                .step-container{
+                    display: flex;
+                  align-items: center;  
+                    z-index: 2;
+                }
+                
+                .arrow-icon-container{
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    position: relative;
+                    right: 1.37rem;
+                    bottom: 1.4rem;
+                    .dotted-arrow{
+                        width: 6rem;
+                        height: auto;
+                        transform: rotate(90deg);
+                    }
+                }
+
+               
+
+                
+            }
+
+
+        }
+    }
+
+    .subscribe-btn{
+        display: block;
+        width: 100% ;
+    }
+
 }

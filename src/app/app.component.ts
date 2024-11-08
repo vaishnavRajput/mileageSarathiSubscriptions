@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.breakpointSubscription = this.breakpointObserver
-      .observe(['(max-width: 20rem)'])
+      .observe(['(max-width: 26.563rem)'])
       .subscribe(result => {
         this.isMobileView = result.matches;
       })
